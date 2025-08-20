@@ -1,6 +1,6 @@
 # E-Commerce Application
 
-This project is a full-stack e-commerce platform built with **Next.js, tRPC, Zod, Zustand, and MongoDB**. It includes a public storefront and an administrative dashboard for managing products, categories, users, and store settings.
+The full-stack e-commerce platform built with **Next.js, tRPC, Zod, Zustand, and MongoDB**. It includes a public storefront and an administrative dashboard for managing products, categories, users, and store settings.
 
 ---
 
