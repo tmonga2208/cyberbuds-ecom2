@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# E-Commerce Application
 
-## Getting Started
+This project is a full-stack e-commerce platform built with **Next.js, tRPC, Zod, Zustand, and MongoDB**. It includes a public storefront and an administrative dashboard for managing products, categories, users, and store settings.
 
-First, run the development server:
+---
+
+## Technology Stack
+
+- **Frontend:** Next.js, tRPC  
+- **State Management:** Zustand  
+- **Validation:** Zod  
+- **Database:** MongoDB  
+- **Styling:** TailwindCSS / Shadcn UI (if applicable)  
+
+---
+
+## Features
+
+### Storefront
+- Browse products by categories  
+- View featured and on-sale products  
+- Access product detail pages  
+
+### Authentication
+- Secure user authentication and management  
+- Can be configured with providers such as NextAuth, Clerk, or Auth0  
+
+### Administrative Panel (`/admin`)
+
+#### Dashboard
+- Displays the latest orders  
+
+#### Users
+- Provides a list of all registered users  
+
+#### Categories
+- Create and delete categories  
+- Assign categories to products  
+
+#### Products
+- Manage products with add/edit dialogs  
+- Options include:  
+  - Mark as on sale  
+  - Mark as featured  
+  - Assign categories  
+
+#### Settings
+- Manage store-wide configurations such as branding and metadata  
+
+---
+
+## Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+ecommerce-app/
+├── src/
+│   ├── pages/
+│   │   ├── index.tsx          # Storefront
+│   │   ├── admin/             # Administrative dashboard
+│   │   │   ├── index.tsx      # Dashboard (latest orders)
+│   │   │   ├── users.tsx      # Users list
+│   │   │   ├── categories.tsx # Category management
+│   │   │   ├── products.tsx   # Product management
+│   │   │   └── settings.tsx   # Store settings
+│   ├── server/                # tRPC routers, MongoDB models
+│   ├── store/                 # Zustand state management
+│   └── utils/                 # Zod schemas and helper functions
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+##  Configure environment variables
+- Create a .env file in the root directory:
+DATABASE_URL=your-mongodb-uri
+NEXTAUTH_SECRET=your-secret
+NEXTAUTH_URL=http://localhost:3000
