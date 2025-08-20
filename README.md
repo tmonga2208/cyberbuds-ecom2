@@ -69,12 +69,12 @@ ecommerce-app/
 ```
 ##  Configure environment variables
 - Create a .env file in the root directory:
-MONGODB_URI=your-mongo-url
-NEXTAUTH_SECRET=your-secret-key
-NEXTAUTH_URL=http://localhost:3000
-RAZORPAY_KEY_ID=your-razorpay-key-id
-RAZORPAY_KEY_SECRET=your-razorpay-key-secret
-IMAGEKIT_PUBLIC_KEY=your-imagekit-public-key
-IMAGEKIT_PRIVATE_KEY=your-imagekit-private-key
-IMAGEKIT_URL_ENDPOINT=your-imagekit-url-endpoint
+- MONGODB_URI=your-mongo-url
+- NEXTAUTH_SECRET=your-secret-key
+- NEXTAUTH_URL=http://localhost:3000
+- RAZORPAY_KEY_ID=your-razorpay-key-id
+- RAZORPAY_KEY_SECRET=your-razorpay-key-secret
+- IMAGEKIT_PUBLIC_KEY=your-imagekit-public-key
+- IMAGEKIT_PRIVATE_KEY=your-imagekit-private-key
+- IMAGEKIT_URL_ENDPOINT=your-imagekit-url-endpoint
 
